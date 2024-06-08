@@ -1,8 +1,16 @@
 import 'package:area_51/pages/home_page.dart';
+import 'package:area_51/theme/theme.dart';
+import 'package:area_51/theme/theme_prodiver.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProdiver(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,8 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(useMaterial3: true),
       home: const HomePage(),
+      theme: Provider.of<ThemeProdiver>(context).themeData,
     );
   }
 }
