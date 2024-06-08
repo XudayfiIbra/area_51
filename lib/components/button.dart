@@ -1,3 +1,4 @@
+import 'package:area_51/components/butto_toggle.dart';
 import 'package:flutter/material.dart';
 
 class ButtonBox extends StatefulWidget {
@@ -43,13 +44,13 @@ class _ButtonBoxState extends State<ButtonBox>
       onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: widget.color, borderRadius: BorderRadius.circular(8)),
-        padding: const EdgeInsets.all(25),
-        child: Center(
-            child: Icon(
-          Icons.wb_sunny_rounded,
-          color: Theme.of(context).colorScheme.tertiary,
-        )),
+          color: widget.color,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        // padding: const EdgeInsets.all(25),
+        child: const Center(
+          child: ToggleButton(),
+        ),
       ),
     );
   }
