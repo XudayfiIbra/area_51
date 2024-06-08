@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (context) => ThemeProdiver(),
+      create: (context) => ThemeProvider(),
       child: const MyApp(),
     ),
   );
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      theme: Provider.of<ThemeProdiver>(context).themeData,
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

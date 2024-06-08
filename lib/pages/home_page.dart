@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           child: ButtonBox(
             color: Theme.of(context).colorScheme.secondary,
             onTap: () {
-              Provider.of<ThemeProdiver>(context, listen: false).toggleTheme();
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
             },
           ),
         ),
